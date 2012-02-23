@@ -1,0 +1,37 @@
+<alfresco-config>
+
+	<!--  add webable aspect properties to property sheet -->
+	<config evaluator="aspect-name" condition="sc:webable">
+		<property-sheet>
+			<show-property name="sc:published" display-label-id="published" />
+			<show-property name="sc:isActive" display-label-id="isActive" read-only="true" />
+			<show-property name="sc:expiresOn" display-label-id="expiresOn" read-only="true" />
+			<show-property name="sc:shortLink" display-label-id="shortLink" read-only="true" />
+		</property-sheet>
+	</config>
+
+	
+
+	<config evaluator="string-compare" condition="Action Wizards">
+	    <!-- The list of aspects to show in the add/remove features action -->
+    	<!-- and the has-aspect condition -->	
+		<aspects>
+			<aspect name="sc:webable"/>
+		</aspects>
+	
+	</config>	
+	
+	<config evaluator="string-compare" condition="Advanced Search">
+		<advanced-search>
+			<content-types>
+			</content-types>
+			<custom-properties>
+				<meta-data aspect="sc:webable" property="sc:published" display-label-id="published" />
+				<meta-data aspect="sc:webable" property="sc:isActive" display-label-id="isActive" />
+				<meta-data aspect="sc:webable" property="sc:expiresOn" display-label-id="expiresOn" />
+				<meta-data aspect="sc:webable" property="sc:shortLink" display-label-id="shortLink" />
+					
+			</custom-properties>
+		</advanced-search>
+	</config>
+</alfresco-config>

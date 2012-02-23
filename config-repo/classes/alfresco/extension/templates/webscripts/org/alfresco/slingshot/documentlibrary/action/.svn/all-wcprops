@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/!svn/ver/16/trunk/Share%20Backup%20Action/config/alfresco/templates/webscripts/org/alfresco/slingshot/documentlibrary/action
+END
+backup.post.desc.xml
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/!svn/ver/16/trunk/Share%20Backup%20Action/config/alfresco/templates/webscripts/org/alfresco/slingshot/documentlibrary/action/backup.post.desc.xml
+END
+backup.post.json.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/!svn/ver/16/trunk/Share%20Backup%20Action/config/alfresco/templates/webscripts/org/alfresco/slingshot/documentlibrary/action/backup.post.json.ftl
+END
+backup.post.json.js
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/!svn/ver/16/trunk/Share%20Backup%20Action/config/alfresco/templates/webscripts/org/alfresco/slingshot/documentlibrary/action/backup.post.json.js
+END

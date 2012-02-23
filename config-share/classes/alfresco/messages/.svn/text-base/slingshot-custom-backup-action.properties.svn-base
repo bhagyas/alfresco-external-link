@@ -1,0 +1,4 @@
+# Custom actions
+actions.document.backup=Backup
+message.backup.success='{0}' successfully backed up.
+message.backup.failure=Couldn't backup '{0}

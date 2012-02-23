@@ -1,0 +1,10 @@
+<webscript kind="org.alfresco.repository.content.stream">
+ <shortname>Show Document</shortname>
+ <description>
+  Script that loads a document which has been made accessible to the public.
+ </description>
+ <url>/labs/show/document/{documentShortLink}</url>
+ <format default="html">extension</format>
+ <authentication runas="system">none</authentication>
+ <transaction>required</transaction>
+</webscript>

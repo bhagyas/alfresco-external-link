@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE beans PUBLIC '-//SPRING//DTD BEAN//EN' 'http://www.springframework.org/dtd/spring-beans.dtd'>
+
+<beans>
+	<!-- Registration of new models -->
+	<bean id="someco.dictionaryBootstrap" parent="dictionaryModelBootstrap"
+		depends-on="dictionaryBootstrap">
+		<property name="models">
+			<list>
+				<value>alfresco/extension/model/scModel.xml</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- Publish with Short Url Behaviour Bean -->
+	<bean id="publishWithShortUrlBehavior" class="com.someco.PublishWithShortUrlBehavior"
+		init-method="init">
+		<constructor-arg ref="NodeService" />
+		<constructor-arg ref="policyComponent" />
+	</bean>
+
+	<bean id="webscript.com.someco.rendition.get" class="com.someco.RenditionWebScript"
+		parent="webscript">
+		<property name="repository" ref="repositoryHelper" />
+		<property name="serviceRegistry" ref="ServiceRegistry" />
+		
+		<property name="mimeTypeService" ref="MimetypeService" />
+		<property name="fileFolderService" ref="FileFolderService" />
+		<property name="nodeService" ref="NodeService" />
+		<property name="contentService" ref="ContentService" />
+	</bean>
+</beans>

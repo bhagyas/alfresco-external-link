@@ -1,0 +1,4 @@
+.doclist .onActionBackup a
+{
+   background-image: url(backup-16.png) !important;
+}

@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>publish</shortname>
+  <description>Document List Action - Publish document(s)</description>
+  <url>/slingshot/doclib/action/publish/site/{site}/{container}</url>
+  <format default="json">argument</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

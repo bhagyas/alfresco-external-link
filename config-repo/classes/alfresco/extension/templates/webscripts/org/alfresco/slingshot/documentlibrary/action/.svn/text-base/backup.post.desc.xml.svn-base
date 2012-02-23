@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>backup</shortname>
+  <description>Document List Action - Backup document(s)</description>
+  <url>/slingshot/doclib/action/backup/site/{site}/{container}</url>
+  <format default="json">argument</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

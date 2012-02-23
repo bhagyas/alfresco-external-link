@@ -1,0 +1,84 @@
+<alfresco-config>
+   <!-- Document Library config section -->
+   <config evaluator="string-compare" condition="DocumentLibrary">
+      <!--
+         Used by the "Manage Aspects" action
+
+         For custom aspects, remember to also add the relevant i18n string(s)
+            cm_myaspect=My Aspect
+      -->
+      <aspects>
+         <!-- Aspects that a user can see -->
+         <visible>
+            <aspect name="sc:webable" />
+         </visible>
+
+         <!-- Aspects that a user can add. Same as "visible" if left empty -->
+         <addable>
+         </addable>
+
+         <!-- Aspects that a user can remove. Same as "visible" if left empty -->
+         <removeable>
+         </removeable>
+      </aspects>
+
+      <!--
+         Used by the "Change Type" action
+
+         Define valid subtypes using the following example:
+            <type name="cm:content">
+               <subtype name="cm:mysubtype" />
+            </type>
+
+         Remember to also add the relevant i18n string(s):
+            cm_mysubtype=My SubType
+      -->
+      <types>
+      </types>
+   </config>
+   
+   <config replace="true" evaluator="string-compare" condition="AdvancedSearch">
+      <advanced-search>
+         <!-- Forms for the advanced search type list -->
+         <forms>
+            <!--
+               The 'form' config element contains the name of the model type
+               of the form to display.
+               
+               The element supports the following optional attributes:
+                  id = form id, the id of "search" will be assumed if not set
+                  label = label text to display - defaults to model type if not set
+                  labelId = I18N message id of label text to display
+                  description = description text to display
+                  descriptionId = I18N message id of description text to display
+            -->
+            <form labelId="search.form.label.cm_content" descriptionId="search.form.desc.cm_content">cm:content</form>
+            <form labelId="search.form.label.cm_folder" descriptionId="search.form.desc.cm_folder">cm:folder</form>            
+            
+         </forms>
+      </advanced-search>
+   </config>
+
+   
+   <config evaluator="aspect" condition="sc:webable">
+       <forms>
+	       <form>
+	           <field-visibility>
+                   <show id="sc:published" />
+                   <show id="sc:isActive" />
+                   <show id="sc:shortLink" />
+                   <show id="sc:expiresOn" />
+	           </field-visibility>
+	           <appearance> 				    
+		           <field id="sc:published" label-id="prop.sc_published" />
+		           <field id="sc:isActive" label-id="prop.sc_isActive" />
+		           <field id="sc:shortLink" label-id="prop.sc_shortLink" >
+		           	 <control template="/org/alfresco/components/form/controls/shortLink.ftl" />
+		           </field>
+		           <field id="sc:expiresOn" label-id="prop.sc_expiresOn" />
+               </appearance>
+          </form>
+	   </forms>
+   </config>
+
+</alfresco-config>
